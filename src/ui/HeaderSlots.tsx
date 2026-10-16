@@ -13,21 +13,37 @@ export function HeaderTitle() {
         return null
     }
 
-    const showPrivateBadge = view.page.type === 'playlist' && view.page.isPrivate && values.playlist_private
     const showAiBadge = view.isAiArtist && values.artist_ai
-    if (!showPrivateBadge && !showAiBadge) {
+    if (!showAiBadge) {
         return null
     }
 
     return (
         <span className="bi-badges" data-betterinfo-owned="title">
-            {showPrivateBadge && <Badge icon="eye_crossed" label="Приватный плейлист" />}
             {showAiBadge && (
                 <span className="bi-ai">
                     <Badge icon="code" label="Сгенерировано ИИ" />
                     Сгенерировано ИИ
                 </span>
             )}
+        </span>
+    )
+}
+
+export function PlaylistPrivacyIcon() {
+    const view = usePageView()
+    const values = settings.use()
+    if (!view || view.page.type !== 'playlist' || !view.page.isPrivate || !values.playlist_private) {
+        return null
+    }
+
+    return (
+        <span
+            className="bi-private-playlist-icon"
+            data-test-id="UGC_PLAYLIST_ICON"
+            data-betterinfo-owned="playlist-privacy"
+        >
+            <Badge icon="eye_crossed" size="xxs" label="Этот плейлист можете слушать только вы" />
         </span>
     )
 }

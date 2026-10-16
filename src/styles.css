@@ -6,6 +6,19 @@
     gap: var(--ym-spacer-size-xs, 8px);
 }
 
+[data-betterinfo-private-title] {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.bi-private-playlist-icon {
+    display: inline-flex;
+    align-items: center;
+    margin: var(--ym-spacer-size-s, 12px);
+    color: var(--ym-controls-color-primary-text-enabled);
+    transform: translateY(2px);
+}
+
 [data-betterinfo-artist-layout] {
     display: grid;
     gap: 5px;

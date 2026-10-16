@@ -96,6 +96,14 @@ export class DomAdapter {
                     }
                     break
                 case 'playlist':
+                    if (page.isPrivate && settings.playlist_private) {
+                        const titleContainer = document.querySelector(
+                            '[data-test-id="ENTITY_HEADER"] [data-test-id="ENTITY_TITLE"]',
+                        )?.parentElement
+                        if (titleContainer) {
+                            this.changes.mark(titleContainer, 'data-betterinfo-private-title')
+                        }
+                    }
                     renderPlaylistRows(page, settings, this.changes)
                     break
                 case 'artist':

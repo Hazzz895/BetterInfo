@@ -5,7 +5,14 @@ import { defineAddon } from '@pulsesync/addon-sdk'
 import addonConfig from '../addon.config.mjs'
 import { BetterInfo } from './runtime'
 import { settings } from './settings'
-import { AlbumHeaderMeta, ArtistListenerChange, HeaderMeta, HeaderTitle, PlaylistHeaderMeta } from './ui/HeaderSlots'
+import {
+    AlbumHeaderMeta,
+    ArtistListenerChange,
+    HeaderMeta,
+    HeaderTitle,
+    PlaylistHeaderMeta,
+    PlaylistPrivacyIcon,
+} from './ui/HeaderSlots'
 
 export default defineAddon({
     id: addonConfig.id,
@@ -16,6 +23,12 @@ export default defineAddon({
         entityHeaderMeta: HeaderMeta,
     },
     mounts: [
+        {
+            target: () =>
+                document.querySelector('[data-test-id="ENTITY_HEADER"] [data-test-id="ENTITY_TITLE"]')?.parentElement ??
+                null,
+            component: PlaylistPrivacyIcon,
+        },
         {
             target: () =>
                 document.querySelector('[data-test-id="ENTITY_HEADER"] [data-test-id="ARTIST_LISTENERS_COUNT"]')
