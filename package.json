@@ -1,0 +1,27 @@
+{
+  "name": "pulsesync-better-info",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Additional artist, playlist and album information for PulseSync",
+  "packageManager": "yarn@1.22.22",
+  "scripts": {
+    "dev": "node ./scripts/dev-build.mjs",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "check": "tsc --noEmit",
+    "format": "oxfmt .",
+    "sync": "node ./scripts/sync-addon.mjs",
+    "build:sync": "yarn build && yarn sync"
+  },
+  "engines": { "node": "^20.19.0 || >=22.12.0" },
+  "dependencies": { "@pulsesync/addon-sdk": "0.16.0" },
+  "devDependencies": {
+    "@types/node": "26.6.3",
+    "@types/react": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "react": "19.3.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.1",
+    "oxfmt": "0.71.0"
+  }
+}

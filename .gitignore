@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.pulsesync-dev/
+*.tsbuildinfo
+*.log
+.idea/
+.env
+.env.*
