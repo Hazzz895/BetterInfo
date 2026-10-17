@@ -88,6 +88,21 @@
     line-height: var(--ym-font-line-height-label-m);
     color: var(--ym-controls-color-primary-text-enabled);
 }
+.bi-album-release-date {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.bi-album-release-badge {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.bi-album-release-badge svg {
+    box-sizing: border-box;
+    padding-left: 5px;
+    scale: 2;
+}
 .bi-playlist-track-summary::before,
 .bi-artist-facts > span + span::before,
 .bi-album-fact + .bi-album-fact::before,
@@ -100,6 +115,19 @@
     margin-block-end: var(--ym-spacer-size-xxxs, 2px);
     border-radius: 50%;
     background: currentColor;
+}
+.bi-album-fact + .bi-album-fact::before,
+.bi-album-meta_with-leading-separator > .bi-album-fact:first-child::before {
+    position: absolute;
+    inset-inline-start: var(--ym-spacer-size-m, 16px);
+    top: 50%;
+    margin: 0;
+    transform: translateY(-50%);
+}
+.bi-album-fact + .bi-album-fact,
+.bi-album-meta_with-leading-separator > .bi-album-fact:first-child {
+    position: relative;
+    padding-inline-start: calc(var(--ym-spacer-size-m, 16px) * 2 + 0.25rem);
 }
 [data-betterinfo-owner-trigger] {
     cursor: pointer;

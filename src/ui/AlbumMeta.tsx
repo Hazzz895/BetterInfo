@@ -21,10 +21,14 @@ export function AlbumMeta({ album, settings }: { album: AlbumInfo; settings: Set
         <span className={className} data-betterinfo-owned="album-meta">
             {releaseDate && (
                 <span className="bi-album-fact">
-                    {releaseDate}
-                    {isRecentRelease(album.releaseDate, album.isRecent) && (
-                        <Badge icon="chartNew" label="Новый релиз" />
-                    )}
+                    <span className="bi-album-release-date">
+                        <span>{releaseDate}</span>
+                        {isRecentRelease(album.releaseDate, album.isRecent) && (
+                            <span className="bi-album-release-badge">
+                                <Badge icon="chartNew" size="xxs" label="Новый релиз" />
+                            </span>
+                        )}
+                    </span>
                 </span>
             )}
             {genre && <span className="bi-album-fact">{genre}</span>}
