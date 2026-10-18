@@ -2,7 +2,10 @@ const addonConfig = {
     id: '8270a15cc5dc520af9db5d8',
     directoryName: '8270a15cc5dc520af9db5d8',
     name: 'BetterInfo',
-    author: 'Hazzz895',
+    author: [
+        'Hazzz895',
+        'forea.adoxid'
+    ],
     description: 'Добавляет больше информации об исполнителях, плейлистах и альбомах.',
     version: '3.0.0',
     image: 'image.png',
