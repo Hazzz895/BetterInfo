@@ -1,5 +1,6 @@
 const addonConfig = {
-    id: '8270a15cc5dc520af9db5d8',
+    id: "8270a15cc5dc520af9db5d8d",
+    storeAddonId: "362c2dca-d955-4663-aa00-7f84dd47168b",
     directoryName: '8270a15cc5dc520af9db5d8',
     name: 'BetterInfo',
     author: [
