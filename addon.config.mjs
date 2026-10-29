@@ -8,7 +8,7 @@ const addonConfig = {
         'forea.adoxid'
     ],
     description: 'Добавляет больше информации об исполнителях, плейлистах и альбомах.',
-    version: '3.0.0',
+    version: '3.0.1',
     image: 'image.png',
     banner: '',
     libraryLogo: '',
