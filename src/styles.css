@@ -169,7 +169,7 @@ button[data-betterinfo-owner-trigger] {
     min-width: 32px;
     text-align: center;
     font-variant-numeric: tabular-nums;
-    color: var(--ym-controls-color-secondary-text-enabled);
+    color: var(--ym-controls-color-primary-text-enabled);
 }
 .bi-track-date {
     position: absolute;
